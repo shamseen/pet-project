@@ -1,0 +1,11 @@
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px
+}
+
+.nav-button,
+.nav-profile {
+  margin-left: 12px
+}

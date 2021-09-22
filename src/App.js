@@ -1,33 +1,55 @@
-import React,{useState,useEffect} from 'react';
-import './App.css';
-import Results from './views/Results'
+import { useState, useEffect } from 'react'
+import { Route, useHistory, Switch } from 'react-router-dom'
+
+import Layout from './layouts/Layout';
+import {verify, signOut} from './services/user';
+import Login from './views/Login';
+import SignUp from './views/SignUp';
+import Landing from './views/Landing';
 
 function App() {
-  const [data,setData]=useState([]);
-  const getData=()=>{
-    fetch('mockData.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
+  const [user, setUser] = useState(null)
+  const history = useHistory()
+  
+  useEffect(() => {
+    const verifyUser = async () => {
+      const userData = await verify()
+      setUser(userData)
     }
-    )
-      .then(function(response){
-        // console.log(response)
-        return response.json();
-      })
-      .then(function(myJson) {
-        // console.log(myJson);
-        setData(myJson)
-      });
-  }
-  useEffect(()=>{
-    getData()
-  },[])
+    verifyUser()
+  }, [])
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('token');
+    signOut();
+    history.push('/');
+  };
+
   return (
-    <div className="App">
-        <Results mockData={data}/>
+    <div>
+      <Layout
+        user={user}
+        setUser={setUser}
+        handleLogout={handleLogout}
+      >
+        <Switch>
+          <Route path='/sign-up'>
+            <SignUp setUser={setUser}/>
+          </Route>
+          <Route path='/login'>
+            <Login setUser={setUser}/>
+          </Route>
+          <Route exact path='/'>
+            <Landing />
+          </Route>
+        </Switch>
+        {/* <Switch>
+          <Route path='/'>
+            <MainContainer user={user} />
+          </Route>
+        </Switch> */}
+      </Layout>
     </div>
   );
 }
