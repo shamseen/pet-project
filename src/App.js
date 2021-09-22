@@ -67,7 +67,7 @@ function App() {
           <Route exact path='/'>
             <Landing />
           </Route>
-          <Route>
+          <Route path='/results'>
             <Results mockData={data}/>
           </Route>
         </Switch>
