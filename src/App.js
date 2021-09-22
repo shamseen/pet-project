@@ -6,11 +6,35 @@ import {verify, signOut} from './services/user';
 import Login from './views/Login';
 import SignUp from './views/SignUp';
 import Landing from './views/Landing';
+import Results from './views/Results'
 
 function App() {
   const [user, setUser] = useState(null)
+  const [data,setData]=useState([]);
   const history = useHistory()
   
+  const getData=()=>{
+    fetch('mockData.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        // console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        // console.log(myJson);
+        setData(myJson)
+      });
+  }
+  useEffect(()=>{
+    getData()
+  },[])
+
   useEffect(() => {
     const verifyUser = async () => {
       const userData = await verify()
@@ -28,6 +52,7 @@ function App() {
 
   return (
     <div>
+      <Results mockData={data}/>
       <Layout
         user={user}
         setUser={setUser}
