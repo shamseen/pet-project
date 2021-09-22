@@ -1,4 +1,7 @@
+import { Card, Avatar } from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
+const { Meta } = Card;
 
 export default function Results(props) {
   console.log(props.mockData)
@@ -6,11 +9,28 @@ export default function Results(props) {
 
   const renderedData = props.mockData.map(data => {
     return(
-        <ul>
-            <span id="animal">Animal: {data.Animal} <br></br></span>
-            <span id="species">Breed: {data.Breed} <br></br></span>
-            <span id="age">Age: {data.Age}</span>
-        </ul>
+      <div>
+        <Card
+          style={{ width: 300 }}
+          cover={
+            <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            />
+          }
+          actions={[
+            <SettingOutlined key="setting" />,
+            <EditOutlined key="edit" />,
+            <EllipsisOutlined key="ellipsis" />,
+          ]}
+        >
+          <Meta
+            // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+            title={data.Animal}
+            description={data.Breed}
+          />
+        </Card>,
+      </div>
     )
 })
 
