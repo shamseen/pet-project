@@ -1,23 +1,22 @@
 import api from "./apiConfig"
-import jwtDecode from "jwt-decode"
 
-export const signUp = async (credentials) => {
+export const signUp = async (signUpData) => {
   try {
-    const res = await api.post("/sign-up", credentials)
+    const res = await api.post("/sign-up", signUpData)
     localStorage.setItem("token", res.data.token)
-    let user = jwtDecode(res.data.token)
-    return user;
+    api.defaults.headers.common.authorization = `Bearer ${res.data.token}`;
+    return res.data.user;
   } catch (e) {
     throw e
   }
 }
 
-export const signIn = async (credentials) => {
+export const signIn = async (signInData) => {
   try {
-    const res = await api.post("/sign-in", credentials)
+    const res = await api.post("/sign-in", signInData)
     localStorage.setItem("token", res.data.token)
-    let user = jwtDecode(res.data.token)
-    return user;
+    api.defaults.headers.common.authorization = `Bearer ${res.data.token}`;
+    return res.data.user;
   } catch (e) {
     throw e
   }
@@ -26,6 +25,7 @@ export const signIn = async (credentials) => {
 export const verify = async () => {
   const token = localStorage.getItem("token")
   if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`;
     const res = await api.get("/verify")
     return res.data
   } else { 
@@ -35,8 +35,7 @@ export const verify = async () => {
 
 export const signOut = async () => {
   try {
-    localStorage.removeItem("token")
-    return true
+    api.defaults.headers.common.authorization = null;
   } catch(e) {
     throw e
   }

@@ -1,34 +1,41 @@
-import React,{useState,useEffect} from 'react';
+import { useState, useEffect } from 'react'
+import { Route, useHistory } from 'react-router-dom'
 import './App.css';
 
+import Layout from './layouts/Layout';
+import {verify, signOut} from './services/user';
+
 function App() {
-  const [data,setData]=useState([]);
-  const getData=()=>{
-    fetch('mockData.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
+  const [user, setUser] = useState(null)
+  const history = useHistory()
+  
+  useEffect(() => {
+    const verifyUser = async() => {
+      setUser(await verify())
     }
-    )
-      .then(function(response){
-        console.log(response)
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-        setData(myJson)
-      });
-  }
-  useEffect(()=>{
-    getData()
-  },[])
+    verifyUser()
+  }, [])
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('token');
+    signOut();
+    history.push('/');
+  };
+
   return (
     <div className="App">
-     {
-       data && data.length>0 && data.map((item)=><p>{item.about}</p>)
-     }
+      <Layout
+        user={user}
+        setUser={setUser}
+        handleLogout={handleLogout}
+      >
+        {/* <Switch>
+          <Route path='/'>
+            <MainContainer user={user} />
+          </Route>
+        </Switch> */}
+      </Layout>
     </div>
   );
 }
