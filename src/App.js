@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
+import Results from './views/Results'
 
 function App() {
   const [data,setData]=useState([]);
@@ -13,11 +14,11 @@ function App() {
     }
     )
       .then(function(response){
-        console.log(response)
+        // console.log(response)
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
+        // console.log(myJson);
         setData(myJson)
       });
   }
@@ -26,9 +27,7 @@ function App() {
   },[])
   return (
     <div className="App">
-     {
-       data && data.length>0 && data.map((item)=><p>{item.about}</p>)
-     }
+        <Results mockData={data}/>
     </div>
   );
 }
