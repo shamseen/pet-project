@@ -52,7 +52,6 @@ function App() {
 
   return (
     <div>
-      <Results mockData={data}/>
       <Layout
         user={user}
         setUser={setUser}
@@ -68,10 +67,13 @@ function App() {
           <Route exact path='/'>
             <Landing />
           </Route>
+          <Route>
+            <Results mockData={data}/>
+          </Route>
         </Switch>
         {/* <Switch>
           <Route path='/'>
-            <MainContainer user={user} />
+          <MainContainer user={user} />
           </Route>
         </Switch> */}
       </Layout>
