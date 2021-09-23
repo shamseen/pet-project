@@ -53,7 +53,6 @@ function App() {
     <>
       <Layout
         user={user}
-        setUser={setUser}
         handleLogout={handleLogout}
       >
         <Switch>

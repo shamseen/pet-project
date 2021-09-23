@@ -2,11 +2,9 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import "./Layout.css"
 import logo from '../assets/logo.png'
-import SignUp from '../components/SignUp/SignUp'
-// import Login from '../components/Login/Login';
 
 export default function Layout(props) {
-  const { setUser, user, handleLogout } = props;
+  const { user, handleLogout } = props;
   return (
     <>
       <div className='nav-header'>
@@ -34,7 +32,6 @@ export default function Layout(props) {
             <>
               <NavLink className='nav-button' to='/adopt'>ADOPT</NavLink>
               <NavLink className='nav-button' to='/about'>ABOUT</NavLink>
-              {/* <SignUp setUser={setUser} /> */}
               <NavLink className='nav-button work-with-button' to='/find-pet'>WORK WITH US</NavLink>
             </>
           )}
