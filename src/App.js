@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Layout
         user={user}
         setUser={setUser}
@@ -77,7 +77,7 @@ function App() {
           </Route>
         </Switch> */}
       </Layout>
-    </div>
+    </>
   );
 }
 
