@@ -13,9 +13,11 @@ export default function Layout(props) {
             <Link exact to='/'><img className='website-logo' src={logo} alt='website logo' /></Link>
           </div>
           <div>
-            <input
+            <input value={props.searchInput} onChange={(e) => props.handleSearch(e.target.value)}
               className='nav-search'
               placeholder='WHAT PET ARE YOU LOOKING FOR?' />
+              
+
           </div>
         </div>
         <div className='nav-links'>
