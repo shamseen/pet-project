@@ -16,7 +16,8 @@ function App() {
   const history = useHistory()
   
   const getData=()=>{
-    fetch('mockData.json'
+    fetch('http://localhost:8000/search/test/'
+
     ,{
       headers : { 
         'Content-Type': 'application/json',
@@ -40,7 +41,7 @@ function App() {
   const handleSearch = (newSearchInput) => {
     setSearchInput(newSearchInput)
     console.log(data)
-    let filteredData = data.filter(data => data.Animal.includes(newSearchInput))
+    let filteredData = data.filter(data => data.name.includes(newSearchInput))
     setFilteredDataList(filteredData)
     console.log(filteredData)
     if(filteredData) return <Redirect to="/results" />
