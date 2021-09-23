@@ -5,8 +5,8 @@ import dogSmall from '../assets/dogSmall.png'
 
 export default function Landing() {
   return (
-    <div className='landing-test'>
-      <div className='landing-container'>
+    <div className='landing-container'>
+      <div className='landing-text-container'>
         <div className='landing-text'>
           <h1 className='landing-main-text'>Animals that need you most</h1>
           <h2 className='landing-sub-text'>We’re changing the way the world sees and treats unwanted animals.</h2>
@@ -14,16 +14,16 @@ export default function Landing() {
             years</span> a chance at a loving home. Be our dogs and cats fur-ever home today.</h2>
           <button className='landing-button'>FIND YOUR PERFECT MATCH</button>
         </div>
-        <div className='landing-image'>
+        <div className='landing-image-container'>
           <img className='landing-image-large' src={dogLarge} alt='dogs sitting on and in front of a couch' />
           <img className='landing-image-small' src={dogSmall} alt='person holding dog' />
         </div>
       </div>
-      <div className='landing-bottom'>
-        I'm looking for
+      <div className='landing-bottom-container'>
+        <p>I'm looking for</p>
         <br />
-        Dogs
-        Cats
+        <button>DOGS</button>
+        <button>CATS</button>
         <br />
         <div className='inputs'>
           location
