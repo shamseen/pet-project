@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
@@ -25,6 +25,13 @@ export default function SignUp(props) {
       [id]: value
     }))
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('This will run after 5 seconds')
+    }, 5000);
+    return () => clearTimeout(timer)
+  }, [])
 
   const [open, setOpen] = React.useState(false);
 

@@ -17,13 +17,10 @@ export default function LandingForm() {
   const notClickedCat = clickedCat ? true : false
   const notClickedDog = clickedDog ? true : false
 
-  // const handleSubmit = () => {
-
-  // }
   return (
     <>
 
-      <form onSubmit>
+      <form>
         <p className='form-top-text'>I'm looking for</p>
         <button onClick={isClickedDog} disabled={notClickedCat} className={`dog-cat-button ${clickedDog ? 'clickedDog' : ''}`}>DOGS</button>
         <button onClick={isClickedCat} disabled={notClickedDog} className={`dog-cat-button ${clickedCat ? 'clickedCat' : ''}`}>CATS</button>

@@ -34,7 +34,7 @@ export default function Layout(props) {
             <>
               <NavLink className='nav-button' to='/adopt'>ADOPT</NavLink>
               <NavLink className='nav-button' to='/about'>ABOUT</NavLink>
-              <SignUp setUser={setUser} />
+              {/* <SignUp setUser={setUser} /> */}
               <NavLink className='nav-button work-with-button' to='/find-pet'>WORK WITH US</NavLink>
             </>
           )}
