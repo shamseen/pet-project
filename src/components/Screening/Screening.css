@@ -6,9 +6,6 @@
 
 .form-list:before {
   content: counter(item);
-  /* background: var(--main-color-dark); */
-  /* border: solid #fff 1px; */
-  /* border-radius: 1em; */
   font-size: 2em;
   justify-content: center;
   display: flex;
