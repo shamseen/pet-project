@@ -2,8 +2,10 @@ import React from 'react'
 import './Landing.css'
 import dogLarge from '../assets/dogLarge.png'
 import dogSmall from '../assets/dogSmall.png'
+import LandingForm from './LandingForm'
 
 export default function Landing() {
+
   return (
     <div className='landing-container'>
       <div className='landing-text-container'>
@@ -20,20 +22,7 @@ export default function Landing() {
         </div>
       </div>
       <div className='landing-bottom-container'>
-        <p>I'm looking for</p>
-        <br />
-        <button>DOGS</button>
-        <button>CATS</button>
-        <br />
-        <div className='inputs'>
-          location
-          <input />
-          age
-          <input />
-          breed
-          <input />
-          <button>search</button>
-        </div>
+        <LandingForm />
       </div>
     </div>
   )

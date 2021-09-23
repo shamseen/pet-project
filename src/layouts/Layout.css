@@ -6,15 +6,9 @@
   width: 100%
 }
 
-.website-name {
-  font-size: .7em;
-  width: 10vmax;
-  margin-right: 20px
-}
 
-.website-name a {
-  color: #32586D;
-  text-decoration: none;
+.website-logo {
+  width: 15vmax
 }
 
 
@@ -29,7 +23,11 @@
   text-decoration: none;
   color: var(--dark-color);
   font-weight: 600;
+  background: none;
+  border: none;
+  font-size: 1em;
 }
+
 
 
 .work-with-button {
