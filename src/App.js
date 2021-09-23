@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Route, useHistory, Switch } from 'react-router-dom'
+import { Route, useHistory, Switch, Redirect } from 'react-router-dom'
 
 import Layout from './layouts/Layout';
 import {verify, signOut} from './services/user';
@@ -8,11 +8,14 @@ import Results from './views/Results'
 
 function App() {
   const [user, setUser] = useState(null)
-  const [data,setData]=useState([]);
+  const [data,setData]=useState([])
+  const [filteredDataList, setFilteredDataList]=useState([])
+  const [searchInput, setSearchInput]=useState([])
   const history = useHistory()
   
   const getData=()=>{
-    fetch('mockData.json'
+    fetch('http://localhost:8000/search/test/'
+
     ,{
       headers : { 
         'Content-Type': 'application/json',
@@ -32,6 +35,17 @@ function App() {
   useEffect(()=>{
     getData()
   },[])
+
+  const handleSearch = (newSearchInput) => {
+    setSearchInput(newSearchInput)
+    console.log(data)
+    let filteredData = data.filter(data => data.name.includes(newSearchInput))
+    setFilteredDataList(filteredData)
+    console.log(filteredData)
+    if(filteredData) return <Redirect to="/results" />
+    // console.log(searchInput)
+  }
+
 
   useEffect(() => {
     const verifyUser = async () => {
@@ -54,6 +68,7 @@ function App() {
         user={user}
         setUser={setUser}
         handleLogout={handleLogout}
+        handleSearch={handleSearch} mockData={data}
       >
         <Switch>
           <Route exact path='/'>

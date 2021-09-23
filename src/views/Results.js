@@ -18,18 +18,18 @@ export default function Results(props) {
               src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
             />
           }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
+          // actions={[
+          //   <SettingOutlined key="setting" />,
+          //   <EditOutlined key="edit" />,
+          //   <EllipsisOutlined key="ellipsis" />,
+          // ]}
         >
           <Meta
             // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
             title={data.Animal}
             description={data.Breed}
           />
-        </Card>,
+        </Card>
       </div>
     )
 })
