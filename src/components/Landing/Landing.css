@@ -67,6 +67,10 @@ span {
   margin-top: 40px;
 }
 
+.landing-button:hover {
+  cursor: pointer;
+}
+
 .landing-bottom-container {
   background: #ac6c537a;
   border-radius: 5em 5em 0 0;
