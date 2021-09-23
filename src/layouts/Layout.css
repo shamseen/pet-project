@@ -2,10 +2,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px
+  margin: 30px 100px;
+  width: 100%
+}
+
+.website-name {
+  font-size: .7em;
+  width: 10vmax;
+  margin-right: 20px
+}
+
+.website-name a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+.title-search {
+  display: flex;
+  align-items: center;
 }
 
 .nav-button,
 .nav-profile {
-  margin-left: 12px
+  margin-left: 50px;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+
+.work-with-button {
+  background: var(--dark-color);
+  border-radius: 2em;
+  color: #fff;
+  font-size: .7vmax;
+  padding: 15px 27px
+}
+
+.nav-search {
+  border: none;
+  border-radius: 2em;
+  font-size: .7vmax;
+  width: 25vmax;
+  height: 2vmax;
+  padding: 0 0 0 50px;
 }
