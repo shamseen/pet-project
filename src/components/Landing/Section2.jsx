@@ -1,20 +1,20 @@
 import React from 'react'
-import './Info.css'
+import './Section2.css'
 import boyDog from '../../assets/boyDog.png'
 import ladyDog from '../../assets/ladyDog.png'
 
-export default function Info() {
+export default function Section2() {
   return (
-    <div className='info-container'>
-      <div className='info-boxes-container'>
+    <div className='section2-container'>
+      <div className='section2-boxes-container'>
         <div className='box-one'>
           <div className="image-one-outline"></div>
           <div className='image-one-box'>
-            <img className='info-image-one' src={boyDog} alt='boy with dog' />
+            <img className='section2-image-one' src={boyDog} alt='boy with dog' />
           </div>
           <div className="image-two-outline"></div>
           <div className='image-two-box'>
-            <img className='info-image-two' src={ladyDog} alt='lady with dog' />
+            <img className='section2-image-two' src={ladyDog} alt='lady with dog' />
           </div>
         </div>
         <div className='box-two'>
@@ -33,7 +33,7 @@ export default function Info() {
             </div>
             </li>
           </ol>
-          <button className='info-button'>FIND YOUR PERFECT MATCH</button>
+          <button className='section2-button'>FIND YOUR PERFECT MATCH</button>
         </div>
       </div>
       <div className='box-three'>

@@ -1,4 +1,4 @@
-.info-container {
+.section2-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,7 +8,7 @@
   background: #fff;
 }
 
-.info-boxes-container {
+.section2-boxes-container {
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   z-index: 1;
 }
 
-.info-image-one {
+.section2-image-one {
   border-radius: 0 0 7em 7em;
 }
 
@@ -52,7 +52,7 @@
   z-index: 1;
 }
 
-.info-image-two {
+.section2-image-two {
   border-radius: 7em 7em 0 0;
   position: absolute;
   left: 13vmax;
@@ -102,7 +102,7 @@ ol {
   margin: 20px 30px;
 }
 
-.info-button {
+.section2-button {
   border: none;
   border-radius: 2em;
   background: var(--main-color-dark);

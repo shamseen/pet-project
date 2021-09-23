@@ -3,7 +3,8 @@ import '../components/Landing/Landing.css'
 import dogLarge from '../assets/dogLarge.png'
 import dogSmall from '../assets/dogSmall.png'
 import LandingForm from '../components/Landing/LandingForm'
-import Info from '../components/Landing/Info'
+import Section2 from '../components/Landing/Section2'
+import Section3 from '../components/Landing/Section3'
 
 export default function Landing() {
 
@@ -27,7 +28,8 @@ export default function Landing() {
           <LandingForm />
         </div>
       </div>
-      <Info />
+      <Section2 />
+      <Section3 />
     </>
   )
 }
