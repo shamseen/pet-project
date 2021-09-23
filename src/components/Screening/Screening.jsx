@@ -4,7 +4,7 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import '../../components/SignUp/SignUp.css'
-
+import './Screening.css'
 
 export default function Sreening(props) {
 
@@ -27,15 +27,15 @@ export default function Sreening(props) {
         <div className='dialog-left-box'>
           <h1 className='modal-left-title'>How it works</h1>
           <ol>
-            <li><div><>Fill out a 60 sec screener</>
+            <li className='form-list'><div><>Fill out a 60 sec screener</>
               <p>Tell us about yourself and the pet you’re looking for</p>
             </div>
             </li>
-            <li><div><>Get matched with your future pet</>
+            <li className='form-list'><div><>Get matched with your future pet</>
               <p>We’ll match you with your ideal pet according to your screener </p>
             </div>
             </li>
-            <li><div><>Take your purrposeful pal home</>
+            <li className='form-list'><div><>Take your purrposeful pal home</>
               <p>We’ll guide you to the shelter or organization that will help you take your new pet home.</p>
             </div>
             </li>
@@ -57,6 +57,7 @@ export default function Sreening(props) {
               fullWidth
               // value={form.name}
               placeholder="Location"
+              autoComplete="off"
             // onChange={handleInput}
             />
             <input
@@ -88,7 +89,7 @@ export default function Sreening(props) {
             <button
               className='sign-up'
               onClick={handleClose}>CONTINUE</button>
-            <button className='guest' onClick={handleClose}>Skip</button>
+            <button className='guest-skip' onClick={handleClose}>Skip</button>
           </div>
         </div>
       </Dialog>

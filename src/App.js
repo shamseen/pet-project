@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Route, useHistory, Switch, Redirect } from 'react-router-dom'
+import SignUp from './components/SignUp/SignUp';
 
 import Layout from './layouts/Layout';
 import {verify, signOut} from './services/user';
@@ -66,7 +67,6 @@ function App() {
     <>
       <Layout
         user={user}
-        setUser={setUser}
         handleLogout={handleLogout}
         handleSearch={handleSearch} mockData={data}
       >
@@ -78,6 +78,7 @@ function App() {
             <Results mockData={data}/>
           </Route>
         </Switch>
+        <SignUp />
         {/* <Switch>
           <Route path='/'>
           <MainContainer user={user} />

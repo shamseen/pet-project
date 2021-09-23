@@ -8,6 +8,7 @@ import manDog from '../../assets/manDog.png'
 import { signUp } from '../../services/user'
 
 export default function SignUp(props) {
+  const [open, setOpen] = React.useState(false);
   const [signUpData, setSignUpData] = useState({ name: "", email: "", password: "" });
   const { setUser } = props;
   const history = useHistory();
@@ -26,18 +27,15 @@ export default function SignUp(props) {
     }))
   };
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 5 seconds')
+      console.log('timer')
+      setOpen(true);
     }, 5000);
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -45,9 +43,6 @@ export default function SignUp(props) {
 
   return (
     <>
-      <button className='nav-button' onClick={handleClickOpen}>
-        SIGN UP
-      </button>
       <Dialog className='dialog' open={open} onClose={handleClose}>
         <div className='dialog-left-box'>
           <h1 className='modal-left-title'>Welcome to Purrposeful Paws</h1>
@@ -69,6 +64,7 @@ export default function SignUp(props) {
               fullWidth
               value={signUpData.name}
               placeholder="Name"
+              autoComplete="off"
               onChange={handleInput}
             />
             <input
@@ -103,7 +99,7 @@ export default function SignUp(props) {
                 e.preventDefault();
                 handleSubmit(signUpData)
               }}>SIGN UP</button>
-            <button className='guest' onClick={handleClose}>Continue as Guest</button>
+            <button className='guest-skip' onClick={handleClose}>Continue as Guest</button>
           </div>
         </div>
       </Dialog>
