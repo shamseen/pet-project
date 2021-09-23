@@ -1,0 +1,166 @@
+.section2-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* height: 150vh; */
+  width: 100vw;
+  background: #fff;
+}
+
+.section2-boxes-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-one {
+  display: flex;
+  margin-top: 150px;
+  position: relative;
+}
+
+.image-one-outline {
+  border-radius: 0 0 8em 8em;
+  border: #D0AD9D solid;
+  width: 13vmax;
+  height: 15.5vmax;
+  position: absolute;
+  left: 1vmax;
+  top: -1.5vmax;
+}
+
+.image-one-box {
+  z-index: 1;
+}
+
+.section2-image-one {
+  border-radius: 0 0 8em 8em;
+  width: 13vmax;
+  height: 15.5vmax
+}
+
+.image-two-outline {
+  border-radius: 8em 8em 0 0;
+  border: #D0AD9D solid;
+  width: 13vmax;
+  height: 15.5vmax;
+  position: absolute;
+  left: 12vmax;
+  top: 11vmax;
+}
+
+.image-two-box {
+  z-index: 1;
+}
+
+.section2-image-two {
+  border-radius: 8em 8em 0 0;
+  position: absolute;
+  width: 13vmax;
+  height: 15.5vmax;
+  left: 13vmax;
+  top: 10vmax;
+}
+
+.box-two {
+  margin-top: 150px;
+}
+
+.box-two-title {
+  color: var(--main-color-dark);
+  padding-left: 80px;
+  margin-top: 0
+}
+
+.list-title {
+  color: var(--dark-color)
+}
+
+.list-text {
+  color: #6F6C6C;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+.box-two-list {
+  counter-increment: item;
+  display: flex;
+}
+
+.box-two-list:before {
+  content: counter(item);
+  background: var(--main-color-light);
+  border-radius: 5em;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 2em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.356);
+  margin: 20px 30px;
+}
+
+.section2-button {
+  border: none;
+  border-radius: 2em;
+  background: var(--main-color-dark);
+  color: #fff;
+  padding: 12px 20px;
+  margin: 20px 0 0 80px;
+  font-weight: bold;
+}
+
+.box-three {
+  background: var(--dark-color);
+  border-radius: 10em 0;
+  width: 80%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 150px 0;
+  padding: 100px 0
+}
+
+.box-three-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vmax;
+  line-height: 1.5vmax;
+}
+
+.box-three-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.box-three-title {
+  color: var(--accent-color-light);
+  font-size: 3vmax;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.box-three-list {
+  display: flex;
+  align-items: center;
+
+}
+
+.box-three-list:before {
+  content: url('../../assets/paw.png');
+  margin: 10px 30px 10px 0px;
+
+}

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 30px 100px;
-  width: 100%
+  width: 85%
 }
 
 
@@ -28,7 +28,9 @@
   font-size: 1em;
 }
 
-
+.nav-button:hover {
+  cursor: pointer;
+}
 
 .work-with-button {
   background: var(--dark-color);

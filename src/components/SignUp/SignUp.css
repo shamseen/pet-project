@@ -1,0 +1,86 @@
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  display: flex !important;
+  flex-direction: row !important;
+  border-radius: 10em 0 !important;
+}
+
+.dialog-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-span {
+  color: var(--main-color-dark)
+}
+
+.sign-in-span:hover {
+  cursor: pointer;
+}
+
+.dialog-left-box {
+  height: 90%;
+  width: 17vmax;
+  background: linear-gradient(180deg, #45483D 59.49%, #AC6C53 99.99%, #F4EDE6 100%);
+  border-radius: 10em 10em 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-left-title {
+  color: var(--accent-color-light);
+  margin-top: 100px;
+  font-size: 1.5vmax;
+  width: 15vmax
+}
+
+.modal-right-title {
+  font-weight: bold;
+  margin: 0;
+  color: var(--dark-color)
+}
+
+.modal-text {
+  color: var(--main-color-light)
+}
+
+.dialog-right-box {
+  width: 250vmax;
+  text-align: center;
+  margin-top: 100px;
+
+}
+
+.dialog-input {
+  border: none;
+  border-radius: .3em;
+  -webkit-box-shadow: 0 0 0 30px white inset, 1px 2px 4px rgba(0, 0, 0, 0.342) !important;
+  box-shadow: 0 0 0 30px white inset, 1px 2px 4px rgba(0, 0, 0, 0.342) !important;
+  margin: 8px 0;
+  padding: 7px;
+  width: 200px
+}
+
+.sign-up-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up {
+  background: var(--main-color-dark);
+  border: none;
+  color: #fff;
+  border-radius: 2em;
+  padding: 12px 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.guest {
+  border: none;
+  background: none
+}

@@ -3,8 +3,6 @@ import { Route, useHistory, Switch, Redirect } from 'react-router-dom'
 
 import Layout from './layouts/Layout';
 import {verify, signOut} from './services/user';
-import Login from './views/Login';
-import SignUp from './views/SignUp';
 import Landing from './views/Landing';
 import Results from './views/Results'
 
@@ -73,12 +71,6 @@ function App() {
         handleSearch={handleSearch} mockData={data}
       >
         <Switch>
-          <Route path='/sign-up'>
-            <SignUp setUser={setUser}/>
-          </Route>
-          <Route path='/login'>
-            <Login setUser={setUser}/>
-          </Route>
           <Route exact path='/'>
             <Landing />
           </Route>
