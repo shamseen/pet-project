@@ -54,7 +54,6 @@ export default function Sreening(props) {
               id="location"
               label="Location"
               type="text"
-              fullWidth
               // value={form.name}
               placeholder="Location"
               autoComplete="off"
@@ -66,7 +65,6 @@ export default function Sreening(props) {
               id="desired-pet"
               label="Desired Pet"
               type="text"
-              fullWidth
               // value={form.email}
               placeholder="Desired Pet"
               autoComplete="off"
@@ -78,7 +76,6 @@ export default function Sreening(props) {
               id="breed"
               label="Breed"
               type="text"
-              fullWidth
               // value={form.password}
               placeholder="Breed"
               autoComplete="off"

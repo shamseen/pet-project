@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -11,12 +10,10 @@ export default function SignUp(props) {
   const [open, setOpen] = React.useState(false);
   const [signUpData, setSignUpData] = useState({ name: "", email: "", password: "" });
   const { setUser } = props;
-  const history = useHistory();
 
   const handleSubmit = async (e) => {
     const user = await signUp(signUpData);
     setUser(user);
-    history.push("/");
   }
 
   const handleInput = (e) => {
@@ -61,7 +58,6 @@ export default function SignUp(props) {
               id="name"
               label="Name"
               type="text"
-              fullWidth
               value={signUpData.name}
               placeholder="Name"
               autoComplete="off"
@@ -73,7 +69,6 @@ export default function SignUp(props) {
               id="email"
               label="Email Address"
               type="email"
-              fullWidth
               value={signUpData.email}
               placeholder="Email"
               autoComplete="off"
@@ -85,7 +80,6 @@ export default function SignUp(props) {
               id="password"
               label="Password"
               type="password"
-              fullWidth
               value={signUpData.password}
               placeholder="Password"
               autoComplete="off"
@@ -96,9 +90,9 @@ export default function SignUp(props) {
             <button
               className='sign-up'
               onClick={(e) => {
-                handleClose()
                 e.preventDefault();
                 handleSubmit(signUpData)
+                handleClose()
               }}>SIGN UP</button>
             <button className='guest-skip' onClick={handleClose}>Continue as Guest</button>
           </div>
