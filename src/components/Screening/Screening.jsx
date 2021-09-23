@@ -26,7 +26,7 @@ export default function Sreening(props) {
       <Dialog className='dialog' open={open} onClose={handleClose}>
         <div className='dialog-left-box'>
           <h1 className='modal-left-title'>How it works</h1>
-          <ol>
+          <ol className='ol-screen'>
             <li className='form-list'><div><>Fill out a 60 sec screener</>
               <p>Tell us about yourself and the pet you’re looking for</p>
             </div>
