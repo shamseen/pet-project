@@ -17,9 +17,9 @@ export default function LandingForm() {
   const notClickedCat = clickedCat ? true : false
   const notClickedDog = clickedDog ? true : false
 
-  const handleSubmit = () => {
+  // const handleSubmit = () => {
 
-  }
+  // }
   return (
     <>
 
