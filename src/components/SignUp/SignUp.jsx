@@ -1,15 +1,31 @@
+import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import './SignUp.css'
 import manDog from '../../assets/manDog.png'
+import { signUp } from '../../services/user'
 
-export default function SignUp() {
+export default function SignUp(props) {
+  const [signUpData, setSignUpData] = useState({ name: "", email: "", password: "" });
+  const { setUser } = props;
+  const history = useHistory();
+
+  const handleSubmit = async (e) => {
+    const user = await signUp(signUpData);
+    setUser(user);
+    history.push("/");
+  }
+
+  const handleInput = (e) => {
+    const { id, value } = e.target;
+    setSignUpData((prevInput) => ({
+      ...prevInput,
+      [id]: value
+    }))
+  };
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -44,8 +60,9 @@ export default function SignUp() {
               label="Name"
               type="text"
               fullWidth
-              variant="standard"
+              value={signUpData.name}
               placeholder="Name"
+              onChange={handleInput}
             />
             <input
               className='dialog-input'
@@ -54,9 +71,10 @@ export default function SignUp() {
               label="Email Address"
               type="email"
               fullWidth
-              variant="standard"
+              value={signUpData.email}
               placeholder="Email"
               autoComplete="off"
+              onChange={handleInput}
             />
             <input
               className='dialog-input'
@@ -65,13 +83,19 @@ export default function SignUp() {
               label="Password"
               type="password"
               fullWidth
-              variant="standard"
+              value={signUpData.password}
               placeholder="Password"
               autoComplete="off"
+              onChange={handleInput}
             />
           </DialogContent>
           <div className='sign-up-buttons'>
-            <button className='sign-up' onClick={handleClose}>SIGN UP</button>
+            <button
+              className='sign-up'
+              onClick={(e) => {
+                e.preventDefault();
+                handleSubmit(signUpData)
+              }}>SIGN UP</button>
             <button className='guest' onClick={handleClose}>Continue as Guest</button>
           </div>
         </div>
