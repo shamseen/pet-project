@@ -99,7 +99,7 @@ export default function SignUp(props) {
                 e.preventDefault();
                 handleSubmit(signUpData)
               }}>SIGN UP</button>
-            <button className='guest' onClick={handleClose}>Continue as Guest</button>
+            <button className='guest-skip' onClick={handleClose}>Continue as Guest</button>
           </div>
         </div>
       </Dialog>
