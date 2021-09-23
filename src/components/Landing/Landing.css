@@ -7,7 +7,7 @@ span {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 75%;
   height: calc(100vh - 138px);
 }
 

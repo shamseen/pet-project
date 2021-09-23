@@ -9,7 +9,7 @@
 }
 
 .section2-boxes-container {
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
 }
@@ -113,6 +113,7 @@ ol {
   color: #fff;
   padding: 12px 20px;
   margin: 20px 0 0 80px;
+  font-weight: bold;
 }
 
 .box-three {
@@ -132,7 +133,7 @@ ol {
   flex-direction: column;
   align-items: center;
   width: 20vmax;
-  line-height: 23px;
+  line-height: 1.5vmax;
 }
 
 .box-three-right {
@@ -142,7 +143,7 @@ ol {
 }
 
 .box-three-title {
-  color: #D0AD9D;
+  color: var(--accent-color-light);
   font-size: 3vmax;
 }
 

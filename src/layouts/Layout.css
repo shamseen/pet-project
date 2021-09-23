@@ -28,7 +28,9 @@
   font-size: 1em;
 }
 
-
+.nav-button:hover {
+  cursor: pointer;
+}
 
 .work-with-button {
   background: var(--dark-color);
