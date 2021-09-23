@@ -1,6 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import "./Layout.css"
+import logo from '../assets/logo.png'
 
 export default function Layout(props) {
   const { user, handleLogout } = props;
@@ -9,7 +10,7 @@ export default function Layout(props) {
       <div className='nav-header'>
         <div className='title-search'>
           <div className='website-name'>
-            <NavLink exact to='/'><h1>PURRPOSEFUL PAWS</h1></NavLink>
+            <Link exact to='/'><img className='website-logo' src={logo} alt='website logo' /></Link>
           </div>
           <div>
             <input

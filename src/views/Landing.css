@@ -2,40 +2,47 @@ span {
   font-weight: bold;
 }
 
-.landing-test {
-  border: black double;
+.landing-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%
+  width: 80%;
+  height: calc(100vh - 144px);
 }
 
-.landing-container {
+.landing-text-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
-  /* border: dotted brown; */
-  width: 80%;
-  /* position: relative; */
+  width: 100%;
 }
 
-/* .landing-image {
-  position: absolute;
-  right: 450px
-} */
+.landing-text {
+  margin-top: 80px;
+}
+
+.landing-image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-self: flex-end;
+  width: 27vmax;
+}
 
 .landing-image-large {
-  width: 20vmax;
+  width: 22vmax;
   border-radius: 12em 12em 0 0;
-
   z-index: -1;
 }
 
 .landing-image-small {
-  width: 4vmax;
+  width: 5vmax;
   border-radius: 3em;
+  position: absolute;
+  left: 0vmax;
+  top: 4vmax;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.376);
 }
 
 .landing-main-text {
@@ -60,14 +67,79 @@ span {
   margin-top: 40px;
 }
 
-.landing-bottom {
+.landing-bottom-container {
   background: #ac6c537a;
-  border-radius: 2em 2em 0 0;
-  width: 80%;
+  border-radius: 5em 5em 0 0;
+  width: 100%;
   color: #fff;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.inputs {
+.form-top-text {
+  align-self: flex-start;
+  padding: 0 8px;
+}
+
+
+.dog-cat-button {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px 8px;
+  margin: 0 60px 20px 0;
+  font-size: 1vmax;
+}
+
+.dog-cat-button:hover {
+  cursor: pointer;
+}
+
+.clickedDog,
+.clickedCat {
+  border-radius: 2em;
+  padding: 6px 8px;
+  background: var(--main-color-dark);
+}
+
+.clickedCat:hover,
+.clickedDog:hover {
+  cursor: pointer;
+}
+
+.landing-form-text {
+  margin-bottom: 10px;
+}
+
+.landing-form-input-container {
   display: flex;
-  justify-content: center;
+}
+
+.landing-form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  width: 200px;
+  margin: 0 20px 20px 0;
+  border-radius: 2em;
+  background: #fff;
+  border: none;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.239);
+}
+
+.landing-button-search {
+  border: none;
+  border-radius: 2em;
+  background: var(--main-color-dark);
+  color: #fff;
+  font-weight: 600;
+  height: 40px;
+  width: 100px
 }
