@@ -18,13 +18,15 @@
 }
 
 .section3-box-left-title {
-  width: 15vmax
+  width: 24vmax;
+  font-size: 2.8vmax;
 }
 
 .section3-box-left-text {
   line-height: 25px;
   display: flex;
   flex-direction: column;
+  font-size: 1vmax;
 }
 
 .quote-button {
@@ -40,5 +42,5 @@
 
 .section3-box-right-img {
   border-radius: 10em 10em 0 0;
-  height: 20vmax
+  height: 23vmax
 }

@@ -23,8 +23,8 @@
 .image-one-outline {
   border-radius: 0 0 7em 7em;
   border: #D0AD9D solid;
-  width: 237px;
-  height: 279px;
+  width: 13vmax;
+  height: 15.5vmax;
   position: absolute;
   left: 1vmax;
   top: -1.5vmax;
@@ -36,13 +36,15 @@
 
 .section2-image-one {
   border-radius: 0 0 7em 7em;
+  width: 13vmax;
+  height: 15.5vmax
 }
 
 .image-two-outline {
   border-radius: 7em 7em 0 0;
   border: #D0AD9D solid;
-  width: 237px;
-  height: 279px;
+  width: 13vmax;
+  height: 15.5vmax;
   position: absolute;
   left: 12vmax;
   top: 11vmax;
@@ -55,6 +57,8 @@
 .section2-image-two {
   border-radius: 7em 7em 0 0;
   position: absolute;
+  width: 13vmax;
+  height: 15.5vmax;
   left: 13vmax;
   top: 10vmax;
 }
@@ -139,7 +143,7 @@ ol {
 
 .box-three-title {
   color: #D0AD9D;
-  font-size: 3.5em;
+  font-size: 3vmax;
 }
 
 ul {
