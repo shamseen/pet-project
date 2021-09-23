@@ -21,7 +21,7 @@
 }
 
 .image-one-outline {
-  border-radius: 0 0 7em 7em;
+  border-radius: 0 0 8em 8em;
   border: #D0AD9D solid;
   width: 13vmax;
   height: 15.5vmax;
@@ -35,13 +35,13 @@
 }
 
 .section2-image-one {
-  border-radius: 0 0 7em 7em;
+  border-radius: 0 0 8em 8em;
   width: 13vmax;
   height: 15.5vmax
 }
 
 .image-two-outline {
-  border-radius: 7em 7em 0 0;
+  border-radius: 8em 8em 0 0;
   border: #D0AD9D solid;
   width: 13vmax;
   height: 15.5vmax;
@@ -55,7 +55,7 @@
 }
 
 .section2-image-two {
-  border-radius: 7em 7em 0 0;
+  border-radius: 8em 8em 0 0;
   position: absolute;
   width: 13vmax;
   height: 15.5vmax;
