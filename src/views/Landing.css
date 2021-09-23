@@ -141,5 +141,6 @@ span {
   color: #fff;
   font-weight: 600;
   height: 40px;
-  width: 100px
+  width: 100px;
+  align-self: center;
 }
