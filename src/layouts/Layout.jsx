@@ -2,11 +2,9 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import "./Layout.css"
 import logo from '../assets/logo.png'
-import SignUp from '../components/SignUp/SignUp'
-// import Login from '../components/Login/Login';
 
 export default function Layout(props) {
-  const { setUser, user, handleLogout } = props;
+  const { user, handleLogout } = props;
   return (
     <>
       <div className='nav-header'>
@@ -18,26 +16,25 @@ export default function Layout(props) {
             <input value={props.searchInput} onChange={(e) => props.handleSearch(e.target.value)}
               className='nav-search'
               placeholder='WHAT PET ARE YOU LOOKING FOR?' />
-              
+
 
           </div>
         </div>
         <div className='nav-links'>
           {user ? (
             <>
-              <NavLink className='nav-button' to='/adopt'>ADOPT</NavLink>
-              <NavLink className='nav-button' to='/about'>ABOUT</NavLink>
+              <NavLink className='nav-button' to='/'>ADOPT</NavLink>
+              <NavLink className='nav-button' to='/'>ABOUT</NavLink>
               <NavLink className='nav-profile' to={`/profile/${user.name}`}>{(user.name).toUpperCase()}</NavLink>
               <button className='nav-button' onClick={handleLogout}>LOGOUT</button>
-              <NavLink className='nav-button work-with-button' to='/find-pet'>WORK WITH US</NavLink>
+              <NavLink className='nav-button work-with-button' to='/'>WORK WITH US</NavLink>
 
             </>
           ) : (
             <>
-              <NavLink className='nav-button' to='/adopt'>ADOPT</NavLink>
-              <NavLink className='nav-button' to='/about'>ABOUT</NavLink>
-              {/* <SignUp setUser={setUser} /> */}
-              <NavLink className='nav-button work-with-button' to='/find-pet'>WORK WITH US</NavLink>
+              <NavLink className='nav-button' to='/'>ADOPT</NavLink>
+              <NavLink className='nav-button' to='/'>ABOUT</NavLink>
+              <NavLink className='nav-button work-with-button' to='/'>WORK WITH US</NavLink>
             </>
           )}
         </div>
