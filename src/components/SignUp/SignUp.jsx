@@ -96,6 +96,7 @@ export default function SignUp(props) {
             <button
               className='sign-up'
               onClick={(e) => {
+                handleClose()
                 e.preventDefault();
                 handleSubmit(signUpData)
               }}>SIGN UP</button>
