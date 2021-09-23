@@ -1,5 +1,6 @@
-import { Card, Avatar } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { Card } from 'antd';
+// import { Avatar } from 'antd';
+// import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
@@ -18,18 +19,18 @@ export default function Results(props) {
               src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
             />
           }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
+          // actions={[
+          //   <SettingOutlined key="setting" />,
+          //   <EditOutlined key="edit" />,
+          //   <EllipsisOutlined key="ellipsis" />,
+          // ]}
         >
           <Meta
             // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
             title={data.Animal}
             description={data.Breed}
           />
-        </Card>,
+        </Card>
       </div>
     )
 })
